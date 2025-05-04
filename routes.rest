@@ -10,10 +10,10 @@ GET http://localhost:8080/contacts/6816d072e706acbd46c6e657
 
 // RENDER
 ###
-GET https://cse341-lesson-2b.onrender.com
+GET https://cse341-lesson-2b.onrender.com/contacts
 ###
-GET https://cse341-lesson-2b.onrender.com/6816d064e706acbd46c6e655
+GET https://cse341-lesson-2b.onrender.com/contacts/6816d064e706acbd46c6e655
 ###
-GET https://cse341-lesson-2b.onrender.com/6816d06be706acbd46c6e656
+GET https://cse341-lesson-2b.onrender.com/contacts/6816d06be706acbd46c6e656
 ###
-GET https://cse341-lesson-2b.onrender.com/6816d072e706acbd46c6e657
+GET https://cse341-lesson-2b.onrender.com/contacts/6816d072e706acbd46c6e657
