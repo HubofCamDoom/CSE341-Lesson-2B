@@ -18,10 +18,11 @@ GET https://cse341-lesson-2b.onrender.com/contacts/6816d06be706acbd46c6e656
 ###
 GET https://cse341-lesson-2b.onrender.com/contacts/6816d072e706acbd46c6e657
 
-// Lesson 3 REST
+// Lesson 3 LOCALHOST
 ### ADD a contact to the database
 POST http://localhost:8080/contacts HTTP/1.1
 content-type: application/json
+
 {
     "firstName":"Arthur",
     "lastName":"Pendragon",
@@ -30,7 +31,9 @@ content-type: application/json
     "birthday":"1/1/650"
 }
 ### EDIT a contact in the database
-PUT http://localhost:8080/contacts/ HTTP/1.1
+PUT http://localhost:8080/contacts/68201a8d5c5de17eeedbf199 HTTP/1.1
+content-type: application/json
+
 {
     "firstName":"Arthur",
     "lastName":"Pendragon",
@@ -39,4 +42,30 @@ PUT http://localhost:8080/contacts/ HTTP/1.1
     "birthday":"6/15/550"
 }
 ### DELETE a contact from the database
-DELETE http://localhost:8080/contacts/ HTTP/1.1
+DELETE http://localhost:8080/contacts/68201a8d5c5de17eeedbf199 HTTP/1.1
+
+// Lesson 3 RENDER
+###
+POST https://cse341-lesson-2b.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Arthur",
+    "lastName":"Pendragon",
+    "email":"apendragon@camelot.net",
+    "favoriteColor":"Blue",
+    "birthday":"1/1/650"
+}
+###
+PUT https://cse341-lesson-2b.onrender.com/contacts/68201800b72020ac8323a10b HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Arthur",
+    "lastName":"Pendragon",
+    "email":"apendragon@camelot.net",
+    "favoriteColor":"Orange",
+    "birthday":"6/15/550"
+}
+###
+DELETE https://cse341-lesson-2b.onrender.com/contacts/68201800b72020ac8323a10b HTTP/1.1
