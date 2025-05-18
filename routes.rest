@@ -70,5 +70,5 @@ content-type: application/json
     "birthday":"6/15/550"
 }
 ###
-DELETE https://cse341-lesson-2b.onrender.com/contacts/68294c0e8a50c0566609add1 HTTP/1.1
+DELETE https://cse341-lesson-2b.onrender.com/contacts/68294c598a50c0566609add2 HTTP/1.1
 
