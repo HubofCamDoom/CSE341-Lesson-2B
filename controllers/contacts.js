@@ -3,7 +3,7 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res, next) => {
-  const result = await mongodb.getDb().db().collection('contacts').find();
+  const result = await mongodb.getDb().db('CSE341').collection('contacts').find();
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
@@ -14,7 +14,7 @@ const getSingle = async (req, res, next) => {
   const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
-    .db()
+    .db('CSE341')
     .collection('contacts')
     .find({ _id: userId });
   result.toArray().then((lists) => {
@@ -32,7 +32,7 @@ const addContact = async (req, res, next) => {
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday
   };
-  const result = await mongodb.getDb().db().collection('contacts').insertOne(contact);
+  const result = await mongodb.getDb().db('CSE341').collection('contacts').insertOne(contact);
   if (result.acknowledged) {
     res.status(201).json(result);
   } else {
@@ -50,7 +50,7 @@ const editContact = async (req, res) => {
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday
   };
-  const result = await mongodb.getDb().db().collection('contacts').replaceOne({ _id: userId }, contact);
+  const result = await mongodb.getDb().db('CSE341').collection('contacts').replaceOne({ _id: userId }, contact);
   console.log(result);
   if (result.modifiedCount > 0) {
     res.status(204).send();
@@ -62,7 +62,7 @@ const editContact = async (req, res) => {
 // MongoDB DELETE controller
 const removeContact = async (req, res) => {
   const userId = new ObjectId(req.params.id);
-  const result = await mongodb.getDb().db().collection('contacts').remove({ _id: userId }, true);
+  const result = await mongodb.getDb().db('CES341').collection('contacts').deleteOne({ _id: userId }, true);
   console.log(result);
   if (result.deletedCount > 0) {
     res.status(200).send();

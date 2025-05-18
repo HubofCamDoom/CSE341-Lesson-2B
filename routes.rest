@@ -31,7 +31,7 @@ content-type: application/json
     "birthday":"1/1/650"
 }
 ### EDIT a contact in the database
-PUT http://localhost:8080/contacts/68201a8d5c5de17eeedbf199 HTTP/1.1
+PUT http://localhost:8080/contacts/68294ac0913d8879fe1d1fe9 HTTP/1.1
 content-type: application/json
 
 {
@@ -42,7 +42,7 @@ content-type: application/json
     "birthday":"6/15/550"
 }
 ### DELETE a contact from the database
-DELETE http://localhost:8080/contacts/68201a8d5c5de17eeedbf199 HTTP/1.1
+DELETE http://localhost:8080/contacts/68294ac0913d8879fe1d1fe9 HTTP/1.1
 
 // Lesson 3 RENDER
 ###
@@ -59,7 +59,7 @@ content-type: application/json
     "birthday":"1/1/650"
 }
 ###
-PUT https://cse341-lesson-2b.onrender.com/contacts/68201d05f08b5cf516c0eef5 HTTP/1.1
+PUT https://cse341-lesson-2b.onrender.com/contacts/68294c0e8a50c0566609add1 HTTP/1.1
 content-type: application/json
 
 {
@@ -70,5 +70,5 @@ content-type: application/json
     "birthday":"6/15/550"
 }
 ###
-DELETE https://cse341-lesson-2b.onrender.com/contacts/68201d05f08b5cf516c0eef5 HTTP/1.1
+DELETE https://cse341-lesson-2b.onrender.com/contacts/68294c0e8a50c0566609add1 HTTP/1.1
 

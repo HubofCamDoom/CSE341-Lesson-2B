@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "Description",
+    "title": "Contact API",
+    "description": "Swagger API for CSE341 student Camden",
     "version": "1.0.0"
   },
   "host": "cse341-lesson-2b.onrender.com",
